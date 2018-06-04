@@ -1,0 +1,32 @@
+Configuring simple-sendfile-0.2.27...
+Preprocessing library for simple-sendfile-0.2.27..
+Building library for simple-sendfile-0.2.27..
+[1 of 3] Compiling Network.Sendfile.Types ( Network\Sendfile\Types.hs, .stack-work\dist\5c8418a7\build\Network\Sendfile\Types.o )
+[2 of 3] Compiling Network.Sendfile.Fallback ( Network\Sendfile\Fallback.hs, .stack-work\dist\5c8418a7\build\Network\Sendfile\Fallback.o )
+
+Network\Sendfile\Fallback.hs:25:36: warning: [-Wdeprecations]
+    In the use of `$$'
+    (imported from Data.Conduit, but defined in conduit-1.3.0.2:Data.Conduit.Internal.Conduit):
+    Deprecated: "Use runConduit and .|"
+   |
+25 |     runResourceT $ sourceFile path $$ sinkSocket sock hook
+   |                                    ^^
+
+Network\Sendfile\Fallback.hs:27:66: warning: [-Wdeprecations]
+    In the use of `$$'
+    (imported from Data.Conduit, but defined in conduit-1.3.0.2:Data.Conduit.Internal.Conduit):
+    Deprecated: "Use runConduit and .|"
+   |
+27 |     runResourceT $ EB.sourceFileRange path (Just off) (Just len) $$ sinkSocket sock hook
+   |                                                                  ^^
+
+Network\Sendfile\Fallback.hs:30:47: warning: [-Wdeprecations]
+    In the use of type constructor or class `Sink'
+    (imported from Data.Conduit, but defined in conduit-1.3.0.2:Data.Conduit.Internal.Conduit):
+    Deprecated: "Use ConduitT directly"
+   |
+30 | sinkSocket :: MonadIO m => Socket -> IO () -> Sink ByteString m ()
+   |                                               ^^^^
+[3 of 3] Compiling Network.Sendfile ( Network\Sendfile.hs, .stack-work\dist\5c8418a7\build\Network\Sendfile.o )
+Installing library in C:\sr\snapshots\f816a61f\lib\x86_64-windows-ghc-8.2.2\simple-sendfile-0.2.27-DJoDYMP8gfJJFfg73NzYer
+Registering library for simple-sendfile-0.2.27..
